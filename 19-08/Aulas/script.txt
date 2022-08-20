@@ -1,0 +1,83 @@
+/*
+angular
+material - pt. visual
+baseado em componentes
+templates
+diretivas
+serviços -> dados
+reuso e encapsulamento de elementos visuais
+template e componentes (script) se comunicam, estão ligadas a diretivas
+baseado em 'pedaços' (componentes) -html e js
+componente formados pelo typescript (comportamento), js, css e html
+vários núcleos formando cd componente
+cd componente possui um template ->
+os componentes carregam na mesma página
+
+diretivas - usa coisas do script (extende o HTML)
+liga o script ao html (binding) - customizável
+faz DOM 'automatico'
+
+serviço - representam valores, funções ou recursos utilizados em um app.
+distingue componentes dos servições
+
+reuso p/ msm pág
+
+cli - com prompt -> ng
+usar o node ou CDN
+@angular/cli - comand line interface 
+instalar global
+pasta angula cli
+ng new - novo projeto
+
+extensões p/ angular
+
+=====================
+node m - bibliotecas
+- caso n tenha  a node modules -> npm install
+
+package - dependencias do json
+
+src -> app -> todos os componentes
+assets - coisas que não são códigos
+environments -> ambientes de produção e desenvolvimento (identifica o ambiente automatico)
+
+é possível crias próprias tags
+modules - ativa e desativa coisas do angular
+main - faz o angular funcionar
+polifill implementa algo que n tem no browser
+css de cd componente é isolado
+app -todos os componentes
+
+exec angular -> ng serve --open (abre na aplicação) ou ng s --o
+
+npm install -g @angular/cli
+npm run start
+
+componente ->
+@decorador/notação -> cód que dá significado a outro código
+->afeta o que está dentro dele.
+todo componente no angular é uma classe
+
+no type export class NOME DA CLASSE
+var dentro da classe - propriedade
+inferencia "adivinha" qual o tipo
+binding - conseguir no HTML acessar os comandos do TS (ligação)
+'interpoção' {{}} - equiv a interpolação
+css de um comp não pega p/ outros
+é sempre isolado para tudo colocar no arquivo de style
+cada componente só possui UMA classe!
+
+criar um componente 
+fica separada se tiver alguma funcionalidade especificica
+
+ng generate -> criar algo (que não seja projeto)
+ng generate o-que-qr-gerar pasta /  .._ componente?
+
+implements - herança
+onInit - roda quando o componente está dentro (roda várias vezes)
+constructor uma vez
+dentro de classe não precisa de function
+
+cria como se fosse uma tag .. (navegador entende)
+pipe - faz coisa especica c/ a string
+*/
