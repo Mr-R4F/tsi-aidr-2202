@@ -1,0 +1,55 @@
+Binds e interpolação
+
+bind co ligação
+são formas de conectar o template de um componente
+liga o ts no html (ligação) ou vice e versa
+
+- podem ser feitos entre elementos de texto ou atributos(value....) de componetes
+
+ligação de atributos c/ componentes
+
+interpolação pega página e faz uma expressão
+{{propriedade}} - realiza a interpolação de uma proriedade ou método
+
+o angular substitui a ocorrência pelo valor da propriedade
+vai 'atrás' do valor e coloca na tela
+
+
+instalar o cli do angular
+todos começam com ng (comandos)
+
+ng generate component gera componente E COLOCAR OU NA VIEW OU OUTRO LOCAL
+ng serve --open / s -o
+
+ng new nome-do-aqqrv. - cria um projeto
+
+np install -g @angular cli instalar o Angular 
+necessário o Node.js
+
+..componente spect é só para teste
+
+O bind é feito apenas no mesmo componente
+{{propriedade-que-quer-fazer-referência}} - o angular resolve (ao processar no navegador substitui pelo valor real)
+é possível colocar expressões
+tudo deve estar dentro do app.component
+
+chamar o componente ( p/ aparecer) ->components.ts -> seletor -> componente
+<nome-do-componente><"">//chamada do componente]
+
+não é possivel acessar funções de outros componentes
+
+Bind unidirecional (interpolação)
+uma via apenas
+interpolação é uma forma de ligação unicidrecional (do script para o HTML) (sempre vem, é resolvido na página)
+SEMRPE DO TS -> PÁGINA
+
+Lado do componente afeta o HTML
+OU source-to-view (código para tela)
+
+property bind (bind de atributos/ propriedades)
+Para realiza-lo usar o '[nome-do-atributo]' = valor (jeito menos feio)
+
+{{}} - é usado em texto
+[] usar em atributos
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    {{propriedade}}
+    <p> {{propriedade}}</p>
+    {{propriedade + propriedade}}
+    {{propriedade + ' ' + propriedade}}
+    <h3>{{valor1 * valor1}}</h3>
+    <p class="{{valor2}}">Algo</p>
+    <h4>{{ obterNome() }}</h4>
+    <p>O resultado de 2 + 2 é {{ somar(2, 2) }}</p>
+    <!--
+      é possível resolver atributos de classes dentro do html
+       Interpolação dentro da classe e outros também
+
+      é possível chamar funções por interpolação
+
+      //chamar apenas se for simples, pois o angular ao carregar a página vai chamar a função
+
+
+
+     -->
+
+  </div>
+</body>
+</html>

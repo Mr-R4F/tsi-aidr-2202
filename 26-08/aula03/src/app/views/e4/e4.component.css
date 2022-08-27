@@ -1,0 +1,17 @@
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.img:hover {
+  transform: scale(1.5) ;
+  border: 2px solid #000;
+}
+
+.img2:active {
+  transform: rotateX(55deg) scale(1.2);
+}
+
+.img3:hover {
+  height: 370px;
+}
