@@ -53,3 +53,15 @@ Para realiza-lo usar o '[nome-do-atributo]' = valor (jeito menos feio)
 [] usar em atributos
 
 
+bind (liga o html com o ts)
+property binding - feito especificamente para atributos
+
+criar componentes -ng generate component pasta/nome-do-componente (rodar dentro da pasta) ou ng g c (views/nome)
+atualiza sempre que cria um componente
+referenciar o arquivo
+o atributo deve apontar para o arquivo
+[atr]="variavel do atributo"
+
+necessário componente (faz com que os componentes aparecam na tela) e fazer a chamada do componente (seletor)
+<app-`tag-do-componente`><""> seletor (necessário rotas caso não usar o componente)
+procura um valor

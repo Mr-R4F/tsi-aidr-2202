@@ -24,10 +24,7 @@ export class ExInterpComponent implements OnInit {
     return 'Rafael'; //interpolação
   }
 
-  somar(valor1:number, valor2: number) { //nas funções ao colcoar parametros é obrigatório colocar os tipos
+  somar(valor1:number, valor2:number) { //nas funções ao colcoar parametros é obrigatório colocar os tipos
     return valor1 + valor2;
   }
-
-
-
 }
