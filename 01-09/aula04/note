@@ -1,0 +1,20 @@
+bind (liga o html com o ts)
+property binding - feito especificamente para atributos
+
+criar componentes -ng generate component pasta/nome-do-componente (rodar dentro da pasta)
+atualiza sempre que cria um componente
+referenciar o arquivo
+o atributo deve apontar para o arquivo
+[atr]="variavel do atributo"
+usar o prop
+
+===
+bind de eventos
+
+utilizados para dispararem eventos nos elementos html
+bind da via unica
+html para o ts (nesse caso) (dipara um evento no typescript)(altera a propriedade do componente)
+por estar ligado ao bind troca tudo
+o ts muda no html
+
+

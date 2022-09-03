@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <button type="button" (click)="mostrarTexto()" [class]="click">DOWNLOAD!!!</button><br>
+      <h3>{{ nome }}</h3>
+      <button type="button" (click)="mudarTexto()" [class]="click">Mudar nome</button>
+      <!--
+        Para coloca a tag que vai executar o evento -> (nome-do-evento) = "função(ões)-a-ser(em)-chamada(s)"
+        isto é [nesse caso, ao clicar o botão faz algo] no angular não possui o 'on'
+
+        chamadar o componente no app component
+        app component (pág) principal
+      -->
+    </div>
+  </body>
+</html>

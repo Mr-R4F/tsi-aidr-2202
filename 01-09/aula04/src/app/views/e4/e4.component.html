@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="tab">
+          <button type="button" (click)="mudarAba('aba1')">ABA 1</button>
+          <div [class]="tabOne"></div>
+        </div>
+        <div class="tab">
+          <button type="button" (click)="mudarAba('aba2')">ABA 2</button>
+          <div [class]="tabTwo"></div>
+        </div>
+        <div class="tab">
+          <button type="button" (click)="mudarAba('aba3')">ABA 3</button>
+          <div [class]="tabThree"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
