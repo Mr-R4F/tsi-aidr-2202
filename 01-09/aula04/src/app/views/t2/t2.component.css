@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+#result {
+  width: 100px;
+  height: 100px;
+  background-color: chartreuse;
+  font-size: xx-large;
+  text-align: center;
+}
