@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.vermelho {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.azul {
+  background-color: #00ccff;
+  color: #00ff00;
+}
+
+button {
+  cursor: pointer;
+}

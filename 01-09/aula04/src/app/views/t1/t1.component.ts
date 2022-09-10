@@ -12,7 +12,7 @@ export class T1Component implements OnInit {
   ngOnInit(): void {
   }
 
-  musicName = 'Piece of Your Heart (Alok Remix)';
+  musicName = 'Piece Of Your Heart (Alok Remix)';
   musicAlbum = 'Piece Of Your Heart';
   musicArtist = 'MEDUZA, Alok, Goodboys';
   music = 'music';

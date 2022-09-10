@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class T3Component implements OnInit {
 
+  classCss = 'vermelho';
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  trocarClasse() {
+    //this.classCss = 'azul';
+    this.classCss == 'vermelho' ? this.classCss = 'azul' : this.classCss = 'vermelho';
+  }
 }

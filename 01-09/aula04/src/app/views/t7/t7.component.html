@@ -8,9 +8,13 @@
   </head>
   <body>
     <div class="container">
-      <div id="sum">
-        <div [id]="result">{{soma(14, 21)}}</div>
+      <div [class]="classeCSS">
+
       </div>
+
+      <button (click)="trocarClasse('vermelho')">RED</button>
+      <button (click)="trocarClasse('verde')">GREEN</button>
+      <button (click)="trocarClasse('azul')">BLUE</button>
     </div>
   </body>
 </html>

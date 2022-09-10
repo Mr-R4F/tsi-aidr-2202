@@ -11,6 +11,11 @@ import { T2Component } from './views/t2/t2.component';
 import { T3Component } from './views/t3/t3.component';
 import { T4Component } from './views/t4/t4.component';
 import { T5Component } from './views/t5/t5.component';
+import { T6Component } from './views/t6/t6.component';
+import { T7Component } from './views/t7/t7.component';
+import { T8Component } from './views/t8/t8.component';
+import { T9Component } from './views/t9/t9.component';
+import { T10Component } from './views/t10/t10.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { T5Component } from './views/t5/t5.component';
     T2Component,
     T3Component,
     T4Component,
-    T5Component
+    T5Component,
+    T6Component,
+    T7Component,
+    T8Component,
+    T9Component,
+    T10Component
   ],
   imports: [
     BrowserModule

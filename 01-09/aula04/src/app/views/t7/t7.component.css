@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button  {
+  cursor: pointer;
+}
+
+.vermelho {
+  background-color: #ff0000;
+}
+
+.verde {
+  background-color: #00ff00;
+}
+
+.azul {
+  background-color: #0000ff;
+}
+
+.vermelho, .azul, .verde{
+  width: 100px;
+  height: 100px;
+}

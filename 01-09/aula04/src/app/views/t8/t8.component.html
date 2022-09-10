@@ -8,9 +8,9 @@
   </head>
   <body>
     <div class="container">
-      <div id="sum">
-        <div [id]="result">{{soma(14, 21)}}</div>
-      </div>
+      <div [class]="classeCss" (mouseenter)="trocarClasse('mouseON')" (mouseleave)="trocarClasse('mouseOFF')">
+        Div
+      </div><!-- o property binding e útil quando ocorre o uso da DOM, isto é precisa mudar dinâmicamente -->
     </div>
   </body>
 </html>
