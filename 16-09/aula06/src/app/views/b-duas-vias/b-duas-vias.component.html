@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binding</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>=== Exemplo de Binding de duas vias ===</h1><br>
+      <h1>E1</h1>
+      <input type="text" [(ngModel)]="nome"> <!-- eq ao value -->
+      <br>
+      <p>{{nome}}</p><!-- interpolação da var linkada com o input (input para a var / var para input)-->
+      <br>
+      <button type="button" (click)="limparNome()">LIMPAR</button>
+      <hr>
+      <h1>E2</h1>
+      <input type="number" [(ngModel)]="val1">
+      <input type="number" [(ngModel)]="val2">
+      <br>
+      <p>{{val1 + val2}}</p>
+      <hr>
+      <h1>E3</h1>
+      <input type="text" [(ngModel)]="nome">
+      <input type="text" [(ngModel)]="sobrenome">
+      <br>
+      <p>{{obterNomeCompleto() }}</p>
+      <h1>E4</h1>
+      <input type="color" [(ngModel)]="color">
+      <p>{{color}}</p>
+      <br>
+      <div class="cor" style="height: 100px; background-color: {{color}}"></div>
+      <h1>E5</h1>
+      <br>
+      <select [(ngModel)]="generoFilme">
+        <option value="terror">Terror</option>
+        <option value="drama">Drama</option>
+        <option value="scifi">Ficção Cientifica</option>
+      </select>
+      <br>
+      <p>{{generoFilme}}</p>
+      <img src="assets/{{generoFilme}}.jpg"><!-- Pega direto do ASSETS -->
+      <h1>E6</h1>
+      <input type="checkbox" [(ngModel)]="contatoTelefone" id="conTel">
+      <label for="conTel">Contato pode Telefone</label>
+
+      <input type="checkbox" [(ngModel)]="contatoEmail" id="conEm">
+      <label for="conEm">Contato por E-mail</label>
+      <hr>
+      <p>Contato por tel.: {{contatoTelefone}}</p>
+      <p>Contato por e-mail.: {{contatoEmail}}</p>
+      <hr>
+      <h1>E7</h1>
+      <input type="radio" [(ngModel)]="classeHeroi" value="mago" id="mg">
+      <label for="mg">Mago</label>
+
+      <input type="radio" [(ngModel)]="classeHeroi" value="guerreiro" id="gro">
+      <label for="gro">Guerreiro</label>
+
+      <input type="radio" [(ngModel)]="classeHeroi" value="arqueiro" id="arq">
+      <label for="arq">Arqueiro</label>
+      <p>A classe selecionada: {{classeHeroi}}</p>
+      <!-- e8 e 9 -->
+    </div>
+  </body>
+</html>
+<!--
+e1
+
+
+via única pois o caminho vai de um lugar para o outro (cód para o HTML)
+
+elementos de entrada ( bind de 2 vias) permite que alterações no template iu no código sejam refletidas de uma p/ o outro (cód p/ html e vice e versa) (usado para elementos de entrada)
+ao interagir vai ser atualizado
+
+[(atributo)] duas vias (usa no lugar do value) = 'nome-da-VAR' (quando for digitado algo este valor vai para a v
+o binding vem desativado por padrão
+é NECESSÁRIO ATIVAR
+
+p/ ativar um modulo no angular
+app -> modulo (config dos modulos ativos no angular)
+p/ cada projeto novo é necessári fazer isso
+
+pág para o código/ código para a pág
+o evento é uma via
+interpolação
+property
+event
+SÃO do código para PÁG
+duas vias
+DO CÓDIGO PARA A PÁG E VICE-VERSA
+Interação
+
+property atualiza uma propriedade
+event trata eventos
+[()] -junção dos dois
+
+OUTRO JEITO DE ESCREVER
+[] = 'nome'
+e
+() = nome$event
+
+o [(ngModel)] -> detecta o atributo comum do INPUT (value, checked...) A DEPENDER
+-->
