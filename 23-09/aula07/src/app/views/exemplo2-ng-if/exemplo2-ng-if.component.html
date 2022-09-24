@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <input type="number" [(ngModel)]="num"><br><br>
+    <!-- vinclar  e vê o valor -->
+    <div *ngIf="num > 0"><!-- para n fica só , só o nome é equiv a undefined/null e vazio-->
+      Número é positivo
+    </div>
+    <div *ngIf="num == 0">
+      Número é igual a zero
+    </div>
+    <div *ngIf="num < 0">
+      Número é negativo
+    </div>
+  </div>
+</body>
+</html>
