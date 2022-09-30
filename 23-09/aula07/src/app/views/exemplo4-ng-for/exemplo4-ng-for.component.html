@@ -8,11 +8,10 @@
 </head>
 <body>
   <div class="container">
-    <ul>
-      <li *ngFor="let pais of paises" (click)="mostrarPais(pais)"><!-- cópia passa o país -->
-        {{pais}}
-      </li>
-    </ul>
+    <div class="post-title" *ngFor="let titulo of titulos; let i = index">
+      {{titulo}} <br>
+      {{posts[i]}}<br><br>
+    </div>
   </div>
 </body>
 </html>

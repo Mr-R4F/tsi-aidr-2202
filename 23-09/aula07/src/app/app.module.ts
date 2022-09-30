@@ -10,6 +10,8 @@ import { Exemplo4NgIfComponent } from './views/exemplo4-ng-if/exemplo4-ng-if.com
 import { Exemplo1NgForComponent } from './views/exemplo1-ng-for/exemplo1-ng-for.component';
 import { Exemplo2NgForComponent } from './views/exemplo2-ng-for/exemplo2-ng-for.component';
 import { Exemplo3NgForComponent } from './views/exemplo3-ng-for/exemplo3-ng-for.component';
+import { Exemplo4NgForComponent } from './views/exemplo4-ng-for/exemplo4-ng-for.component';
+import { Exemplo5NgForComponent } from './views/exemplo5-ng-for/exemplo5-ng-for.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { Exemplo3NgForComponent } from './views/exemplo3-ng-for/exemplo3-ng-for.
     Exemplo4NgIfComponent,
     Exemplo1NgForComponent,
     Exemplo2NgForComponent,
-    Exemplo3NgForComponent
+    Exemplo3NgForComponent,
+    Exemplo4NgForComponent,
+    Exemplo5NgForComponent
   ],
   imports: [
     BrowserModule,

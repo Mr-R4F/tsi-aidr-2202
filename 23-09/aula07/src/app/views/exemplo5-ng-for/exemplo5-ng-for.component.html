@@ -8,11 +8,11 @@
 </head>
 <body>
   <div class="container">
-    <ul>
-      <li *ngFor="let pais of paises" (click)="mostrarPais(pais)"><!-- cópia passa o país -->
-        {{pais}}
-      </li>
-    </ul>
+    <input type="text" name="#" id="#" [(ngModel)]="val">
+    <button type="button" (click)="add(val)">Enviar</button>
+    <ol>
+      <li *ngFor="let nome of nomes">{{nome}}</li>
+    </ol>
   </div>
 </body>
 </html>
