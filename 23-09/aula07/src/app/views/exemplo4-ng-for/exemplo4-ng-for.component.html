@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
+<body><!-- colocar o ng for no elemento que qr repetir -->
   <div class="container">
-    <div class="post-title" *ngFor="let titulo of titulos; let i = index">
-      {{titulo}} <br>
-      {{posts[i]}}<br><br>
+    <div class="post-card" *ngFor="let titulo of titulos; let i = index"><!-- só existe dentro AQUI, index var especial que só existe aqui, passa por cada possição e incrementa automaticio -->
+      <h2>{{titulo}}</h2><!-- usar a var aqui . interpolação -->
+      <p>{{posts[i]}}</p><!-- usa o array, pois não se tem a variável -->
     </div>
   </div>
 </body>

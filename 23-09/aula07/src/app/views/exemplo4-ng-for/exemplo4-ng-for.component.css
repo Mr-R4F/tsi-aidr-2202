@@ -1,0 +1,10 @@
+.post-card {
+  border: 1px solid rgba(211, 211, 211, 0.255);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.414);
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, p {
+  margin: 0;
+}

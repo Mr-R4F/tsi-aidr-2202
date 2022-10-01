@@ -8,10 +8,12 @@
 </head>
 <body>
   <div class="container">
-    <input type="text" name="#" id="#" [(ngModel)]="val">
-    <button type="button" (click)="add(val)">Enviar</button>
+    <label for="di">DIGITE</label>
+    <input type="text" name="#" id="di" [(ngModel)]="val"><!-- acessar o valor da caixa / eqv. (nesse caso ao value) -->
+    <button type="button" (click)="add()" style="cursor: pointer;">ADD</button>
+    <button type="button" (click)="remover()" style="cursor: pointer;">REMOVER</button>
     <ol>
-      <li *ngFor="let nome of nomes">{{nome}}</li>
+      <li *ngFor="let nome of nomes">{{nome}}</li><!-- colocar no 'cara' que qr que repita -->
     </ol>
   </div>
 </body>

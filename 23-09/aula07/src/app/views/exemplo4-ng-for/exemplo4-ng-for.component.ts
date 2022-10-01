@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exemplo4-ng-for.component.css']
 })
 export class Exemplo4NgForComponent implements OnInit {
-  titulos = new Array('tecnologia', 'política', 'saúde');
-  posts = new Array('Um post sobre tecnologia', 'Um post sobre política', 'Um post sobre saúde');
+  titulos = new Array('@Juju35', '@zezin99', '@cecl11');
+  posts = new Array('Assisti Dehmer e estou impactada!', 'O novo COD é incrível', 'Angular é a melhor linguagem de todas');
 
   constructor() { }
 
