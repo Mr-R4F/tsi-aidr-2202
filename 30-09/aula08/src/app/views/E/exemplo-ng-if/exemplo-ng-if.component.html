@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <input type="text" [(ngModel)]="nome"><br><br>
+    <div *ngIf="nome === 'Rafael' || nome === 'rafael'"><!-- para n fica só , só o nome é equiv a undefined/null e vazio-->
+      Nome: Parabéns você ganhou nada :)
+    </div>
+  </div>
+</body>
+</html>
+<!--
+Diretivas estruturais são responsáveis por
+modificar o layout HTML
+
+ng g component views/exemplo-ngif
+
+app component
+component Ts - selector
+
+h3
+hr
+appModule.ts - colocar o model
+
+BrowserModule, FormsModule
+
+*ngIf='condição'
+
+tem * é diretiva
+
+Elas são capazes de remodelar a estrutura do
+DOM, geralmente adicionando, removendo ou
+manipulando elementos
+
+*ngIf ->
+ -->

@@ -8,12 +8,16 @@
 </head>
 <body>
   <div class="container">
-    <h1>E1</h1>
+    <!-- <h1>E1</h1>
     <app-exemplo-ng-switch></app-exemplo-ng-switch>
     <h1>E2</h1>
-    <app-exemplo2-ng-switch></app-exemplo2-ng-switch>
+    <app-exemplo2-ng-switch></app-exemplo2-ng-switch> -->
 
     <h1>E3</h1>
+    <select name="" id="#" [ngSwitch]="val">
+      <option value="E1" *ngSwitchCase="'Exemplo-1'">Exemplo 1 de Ng If</option>
+      <option value=""></option>
+    </select>
   </div>
 </body>
 </html>
