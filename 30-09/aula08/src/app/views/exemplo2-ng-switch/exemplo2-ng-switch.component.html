@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWITCH</title>
+</head>
+<body>
+  <div class="container">
+    <label for="txt">PESQUISE UM CANAL</label>
+    <input type="text" name="#" id="txt" [(ngModel)]="canal">
+      <ol [ngSwitch]="canal">
+        <li *ngSwitchCase="'Guanabara'"><a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank">GUANABARA</a></li>
+        <li *ngSwitchCase="'Code Hive'"><a href="http://youtube.com/c/CodeHiveChannel" target="_blank">CODE HIVE</a></li>
+        <li *ngSwitchCase="'Adrenaline'"><a href="https://www.youtube.com/c/AdrenalineBr" target="_blank">ADRENALINE</a></li>
+        <li *ngSwitchDefault><a href="#">:(</a></li>
+      </ol>
+  </div>
+</body>
+</html>
