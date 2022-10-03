@@ -1,1 +1,2 @@
-//MY FIRST TYPE SCRIPT
+let x = 'Hello World';
+console.log(x);
