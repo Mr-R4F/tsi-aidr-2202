@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 5%;
+  zoom: 125%;
+}
+.container {
+  justify-content: center;
+}
+
+.container, fieldset {
+  display: flex;
+}
+
+form {
+  width: 300px;
+}
+
+legend {
+  text-align: center;
+  font-size: x-large;
+}
+
+fieldset {
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 2px 2px 15px -6px rgba(0,0,0,0.62);
+  border: 0;
+}
+
+label:not(label:first-child) {
+  margin-top: 10%;
+}
+
+input {
+  height: 30px;
+  font-size: larger;
+}
+
+button {
+  margin-top: 13%;
+  cursor: pointer;
+}
+
+.row:last-child {
+  width: 350px;
+  background-color: red;
+}

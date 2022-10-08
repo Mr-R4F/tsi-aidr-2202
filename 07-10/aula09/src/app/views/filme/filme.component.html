@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Gestor de filmes</h1>
+
+        <ul>
+          <li *ngFor="let filme of filmes; let i = index;"><!-- para cd i um filme dif -->
+            <span (click)="selecionarFilme(filme)">{{filme.nome}} ({{filme.nota}})</span>
+            <span (click)="removerFilme(i)"> X</span><!-- ao clicar aqui chama a função remover de acordo com o index, usar index*** -->
+          </li>
+        </ul>
+
+        <div class="results" *ngIf="filmeSelecionado">
+            <label for="txt">FILME</label>
+            <input type="text" name="txt" id="txt" [(ngModel)]="filmeSelecionado.nome"><br><!-- pode ser indefinido pois foi definida -->
+
+            <label for="num">NOTA</label>
+            <input type="number" name="num" id="num" [(ngModel)]="filmeSelecionado.nota"><br>
+
+            <button type="button" (click)="fecharFilme()">Fechar</button><!-- vai tirar a seleção -->
+        </div>
+
+        <div class="new">
+          <button type="button" (click)="novoFilme()">Novo Filme</button>
+        </div>
+      </div>
+  </body>
+</html>

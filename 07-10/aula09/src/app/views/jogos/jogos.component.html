@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOGOS</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <form action="#" method="post">
+        <fieldset *ngIf="jogoSelecionado">
+          <legend>Adicionar</legend>
+
+          <label for="nm">Nome</label>
+          <input type="text" name="nm" id="nm" [(ngModel)]="jogoSelecionado.nome">
+
+          <label for="pd">Produtora</label>
+          <input type="text" name="pd" id="pd" [(ngModel)]="jogoSelecionado.produtora">
+
+          <label for="plt">Plataforma</label>
+          <input type="text" name="plt" id="plt" [(ngModel)]="jogoSelecionado.plataforma">
+
+          <label for="gen">Genêro</label>
+          <input type="text" name="gen" id="gen" [(ngModel)]="jogoSelecionado.genero">
+
+          <button type="submit" (click)="adicionarJogo()">ADD</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="row">
+      <ul>
+        <li *ngFor="let jogo of jogos; let i = index;">
+          {{jogo.nome}} | {{jogo.produtora}} | {{jogo.plataforma}} | {{jogo.genero}}
+          <button type="submit" (click)="deletarJogo(i)">REMOVER</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

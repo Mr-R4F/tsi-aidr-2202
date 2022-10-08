@@ -1,0 +1,25 @@
+exported / private
+
+mapear os sistemas
+
+export class nome-da-classe {
+//algo aqui
+	propriedade: tipo
+}
+? ->: marca a var como opicional não precisa ser inicializada ao ser declarada (nullPointer)
+c/ undefined não compila, deve ser string
+mas caso precise undefined usar -> '?' var pode ser opcional
+
+se for obrigatório, criar um cosntrutor para inicializar a var -> inicializar toda vez que a classe é instanciada
+com val n precisa
+
+n tem val e é opcional -> CONSTRUTOR
+obj -> bolo
+crud c/ as classes
+
+criar pasta model, criar arquivo (nome da classe)
+crud apenas na memória
+
+//metodos para manipulação de arrays - > push -> add itens no final de um array
+-> splice -> remove(atual) / add coisas(no atual) no array ->indice/ qntd quer remover
+
