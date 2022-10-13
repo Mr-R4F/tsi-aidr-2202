@@ -12,4 +12,7 @@ export class E2Component implements OnInit {
   ngOnInit(): void {
   }
 
+  somar(num1:number, num2:number) {
+    return num1 + num2;
+  }
 }

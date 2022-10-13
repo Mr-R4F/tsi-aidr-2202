@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./e3.component.css']
 })
 export class E3Component implements OnInit {
+  classeCss = 'red';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  mudarCor() {
+    this.classeCss == 'red' ? this.classeCss = 'blue' : this.classeCss = 'red';
+  }
 }

@@ -8,9 +8,10 @@
 </head>
 <body>
   <div class="container">
-    <div class="music">Musica: {{musica}}</div>
-    <div class="album">Album:{{album}}</div>
-    <div class="artist">Interprete: {{interprete}}</div>
+    <div (click)="mostrarTexto()">
+      <span id="clickMe">CLIQUE AQUI AGORA </span>
+        {{txt}}
+    </div>
   </div>
 </body>
 </html>

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./e5.component.css']
 })
 export class E5Component implements OnInit {
-
+  nome = '';
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  mostrarNome() {
+    this.nome = String(prompt('Digite seu nome :)'));
+  }
 }

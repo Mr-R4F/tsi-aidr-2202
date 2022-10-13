@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./e1.component.css']
 })
 export class E1Component implements OnInit {
+  musica = 'One Kiss';
+  album = 'One Kiss';
+  interprete = 'Calvin Harris, Dua Lipa';
 
   constructor() { }
 

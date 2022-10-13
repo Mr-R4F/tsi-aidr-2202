@@ -8,9 +8,10 @@
 </head>
 <body>
   <div class="container">
-    <div class="music">Musica: {{musica}}</div>
-    <div class="album">Album:{{album}}</div>
-    <div class="artist">Interprete: {{interprete}}</div>
+    <div [class]="color"></div>
+    <button type="button" (click)="mudarCor('colorRed')">VERMELHO</button>
+    <button type="button" (click)="mudarCor('colorGreen')">VERDE</button>
+    <button type="button" (click)="mudarCor('colorBlue')">AZUL</button>
   </div>
 </body>
 </html>

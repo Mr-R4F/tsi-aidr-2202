@@ -1,0 +1,13 @@
+#color1 {
+  background-color: cornflowerblue;
+}
+
+#color1, #color2 {
+  width: 100px;
+  height: 100px;
+}
+
+#color2 {
+  background-color: darkorange;
+}
+
