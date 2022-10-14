@@ -12,6 +12,12 @@ import { E7Component } from './views/exercicios02/e7/e7.component';
 import { E8Component } from './views/exercicios02/e8/e8.component';
 import { E9Component } from './views/exercicios02/e9/e9.component';
 import { E10Component } from './views/exercicios02/e10/e10.component';
+import { FormsModule } from '@angular/forms';
+import { E11Component } from './views/exercicios03/e11/e11.component';
+import { E12Component } from './views/exercicios03/e12/e12.component';
+import { E13Component } from './views/exercicios03/e13/e13.component';
+import { E14Component } from './views/exercicios03/e14/e14.component';
+import { E15Component } from './views/exercicios03/e15/e15.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +32,15 @@ import { E10Component } from './views/exercicios02/e10/e10.component';
     E8Component,
     E9Component,
     E10Component,
+    E11Component,
+    E12Component,
+    E13Component,
+    E14Component,
+    E15Component,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
