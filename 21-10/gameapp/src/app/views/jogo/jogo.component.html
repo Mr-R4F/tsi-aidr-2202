@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos</title>
+</head>
+<body>
+  <div class="container" style="padding:0; margin:0; box-sizing: border-box;">
+    <h1>Gestor de Jogos</h1><!-- clicar no item e aparecer qual item foi clicado -->
+    <ul>
+      <li *ngFor="let jogo of jogos" (click)="selecionarJogo(jogo)" style="list-style: none; font-size: x-large; font-family: Arial, Helvetica, sans-serif;">
+        {{jogo.nome}} ({{jogo.plataforma}});
+      </li>
+    </ul>
+    <!-- campos para editar os valores  -->
+
+    <div class="result" *ngIf="jogoSelecionado"><!-- fica protegida caso não tenha jogo, senão aparece -->
+      <input type="text" name="#" id="#" [(ngModel)]="jogoSelecionado.nome"><br><!-- mostra o nome do jogo selecionado -->
+
+      <select name="#" id="#" [(ngModel)]="jogoSelecionado.status"><!-- possível status do jogo -->
+        <option value="na" label="Não informado"></option>
+        <option value="q" label="Quero"></option>
+        <option value="t" label="Tenho"></option>
+        <option value="j" label="Jogando"></option>
+        <option value="z" label="Zerado"></option>
+      </select><br>
+
+      <input type="text" name="#" id="#" [(ngModel)]="jogoSelecionado.plataforma"><br>
+      <input type="text" name="#" id="#" [(ngModel)]="jogoSelecionado.genero">
+    </div>
+  </div>
+</body>
+</html>

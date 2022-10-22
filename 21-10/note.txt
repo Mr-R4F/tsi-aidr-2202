@@ -1,0 +1,25 @@
+Serviços
+
+não usar componentes para o gerenciamentos de dados
+serviços -> criado para trabalhar c/ dados
+
+os "componentes" conversam c/ o usuario 
+os serviços "conversam" c/ os dados
+também é possível concentrar funções comumente utilizadas
+
+os serviços são comuns em um CRUD
+
+separação de camadas (componentes e funções)
+
+os demais elementos da aplicação não devem saber qual a font de dados
+
+serviços cd ponto e uma função da operação do CRUD
+Aula 10
+
+ng g service -para criar um serviço
+ng g service pasta/nome-do-arquivo (service/jogo) -> nesse caso
+ng g s -> para criar um serviço
+
+//criar pasta model -> arqv ts
+
+//sempre nomear funções c/ verbos
