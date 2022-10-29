@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JogoComponent } from './views/jogo/jogo.component';
+import { SobreComponent } from './views/sobre/sobre.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JogoComponent
+    JogoComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
