@@ -10,8 +10,9 @@
   <div class="container" style="padding:0; margin:0; box-sizing: border-box;">
     <h1>Gestor de Jogos</h1><!-- clicar no item e aparecer qual item foi clicado -->
     <ul>
-      <li *ngFor="let jogo of jogos" (click)="selecionarJogo(jogo)" style="list-style: none; font-size: x-large; font-family: Arial, Helvetica, sans-serif;">
-        {{jogo.nome}} ({{jogo.plataforma}});
+      <li *ngFor="let jogo of jogos" style="list-style: none; font-size: x-large; font-family: Arial, Helvetica, sans-serif;">
+        <span (click)="selecionarJogo(jogo)">{{jogo.nome}} ({{jogo.plataforma}});</span>
+        <span (click)="excluir(jogo.id)">X</span><!-- ao clicar aqui remove um item -->
       </li>
     </ul>
     <!-- campos para editar os valores  -->
@@ -29,7 +30,11 @@
 
       <input type="text" name="#" id="#" [(ngModel)]="jogoSelecionado.plataforma"><br>
       <input type="text" name="#" id="#" [(ngModel)]="jogoSelecionado.genero">
+
+      <button type="button" (click)="salvar()">Salvar</button><!-- ao clicar aqui chama a função -->
+      <button type="button" (click)="cancelar()">Cancelar</button>
     </div>
+    <button type="button" (click)="novo()">Novo</button>
   </div>
 </body>
 </html>
