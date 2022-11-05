@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Consulta CEP</h3>
+  <input type="text" name="" id="" placeholder="CEP" [(ngModel)]="cep"><!-- eqv ao oninput -->
+  <button type="button" (click)="consultarCep()">Consultar</button>
+
+  <div *ngIf="endereco">
+    <h2>{{endereco.cep}}</h2>
+    <p>{{endereco.logradouro}}</p>
+    <p>{{endereco.complemento}}</p>
+    <p>{{endereco.bairro}}</p>
+    <p>{{endereco.localidade}}</p>
+    <p>{{endereco.uf}}</p>
+  </div><!-- usuario digita , bate na API e mostra os resultados -->
+</body>
+</html>

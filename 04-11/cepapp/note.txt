@@ -1,0 +1,46 @@
+manda xml e json
+
+REST apesar de armazenar variaveis, é possível
+rest permite chamar funções em outros sistemas
+
+REST -> está associado a HTTP
+
+manda url e recebe dados
+
+chama url -> get (obtem algo)
+
+informar url desejada e método HTTP
+pode realizar alguma operação (quase sempre em operações com banco
+
+rest - > chama funções pela internet (cliente faz req p/ server que retorna resposta (json geralmente))
+passa parametros de url, e protocolo
+
+£¢£¢²¢GLSGRGKRWE
+
+testar apis criar
+
+post - deve colocar o body
+
+params e body
+
+deve passar no path parm ( caminho da url)
+
+quem construiu a API (sabe os metodos a serem usados)
+
+consumir a api via angular
+
+dados faz no serviço (SERVE PARA DADOS)
+
+SPAs devem ser responsivas
+
+paralelizar a chamada separa e threads (ficar passando de uma p/ outra)->roda coisas em paralelo par não sobrecarregar a thread principal
+
+observable -> declara uma função que é chamada e retorna um callback (outra função) (deixa rodando e quando a função termina de rodar faz algo c/ o resultado)
+chama  a função que retorna algo (fica esperando), quando tiver ok, faz algo com os dados
+
+json- > deve ter uma classe de modelo para representa-lo
+
+criar uma classe de modelo com base no retorno do json (com os campos e tipos)
+ao chamar criar uma classe de modelo com base nas saidas (endereço nesse caso)
+//fazer um servviço (pois tratará c/ dados)
+a se o códigos (não for operação matemática) usar string
