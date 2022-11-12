@@ -1,0 +1,25 @@
+¬£hpo552t6j2ogpqkQT4LYT2´344³47
+
+serve tipo angular não precisa criar projeto
+
+não necessário na mesma ordem
+
+put altera
+endpoinbt ->novos
+
+conexão via rest ser para a criação de aplicações
+dá para integrar com o BANCO
+
+
+
+prova 2 / 11
+
+endpoint - e angular para consumir
+
+endpoint de cliente 
+
+
+mapeamento de serviços 
+começçar modelo, 
+criar serviço e 
+faz componente

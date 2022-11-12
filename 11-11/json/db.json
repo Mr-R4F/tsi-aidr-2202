@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ],
+  "jogos": [
+    {
+      "id": 1,
+      "nome": "God of War Ragnarok",
+      "plataforma": "PS4/ PS5"
+    }
+  ],
+  "cliente": [
+    {
+      "id": 1,
+      "nome": "TESTE",
+      "cpf": "12345678900"
+    },
+    {
+      "nome": "TESTE",
+      "cpf": "12345678900",
+      "id": 2
+    },
+    {
+      "nome": "teste",
+      "cpf": "123456789",
+      "id": 3
+    },
+    {
+      "nome": "testeeeeee",
+      "cpf": "12345678912",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    button {
+      cursor: pointer;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Gerenciar Clientes</h2>
+    <ul>
+      <li *ngFor="let cliente of mostrarClientes">
+        {{cliente.nome}} - {{cliente.cpf}}
+      </li>
+    </ul>
+
+    <button type="button" (click)="criar()">NOVO</button>
+
+    <div id="fields" *ngIf="inserirClientes"><!-- só aparece se não for undefined -->
+      <form action="#" method="#">
+        <fieldset>
+          <legend>ADD NOVO</legend>
+
+          <label for="nome">Nome</label>
+          <input type="text" name="#" id="nome" placeholder="Nome" [(ngModel)]="inserirClientes.nome"><br>
+
+          <label for="cpf">CPF</label>
+          <input type="text" name="#" id="cpf" placeholder="CPF" [(ngModel)]="inserirClientes.cpf"><br>
+
+          <button type="button" (click)="cancelar()">CANCELAR</button>
+          <button type="button" (click)="salvar()">SALVAR</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
