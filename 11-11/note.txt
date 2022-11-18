@@ -23,3 +23,15 @@ mapeamento de serviços
 começçar modelo, 
 criar serviço e 
 faz componente
+
+
+tratar dados usar o serviço
+ligado a var de cliente (colcoar 0 para sumir o form)
+material . io
+
+framweork integrado para promover o material (mais robusto que o bootstrap)
+html, ts, css
+
+ng add @angular/material para instalar o material. (todas as dependencias)
+
+e depois escolher o tema de instalação

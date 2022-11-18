@@ -9,7 +9,8 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class ClienteComponent implements OnInit {
   mostrarClientes: Cliente[] = [];
-  inserirClientes?: Cliente; //pode ser nulo (pois espera receber dados)
+  cliente?: Cliente; //pode ser nulo (pois espera receber dados) //id aqui
+  inserindo = false;
 
   constructor(private clienteService: ClienteService) { } //por nome (variável) e tipo
 
@@ -24,29 +25,47 @@ export class ClienteComponent implements OnInit {
   } //colocar variavel com o tipo do retorno (no subscribe) (que é chamado quando o BACK responder, e nos parametros terá a resposta do back)
 
   criar() { //cria um cliente novo
-    this.inserirClientes = new Cliente(); //criar um cliente novo (fazendo com que a variavel tenha valor)
+    this.cliente = new Cliente(); //criar um cliente novo (fazendo com que a variavel tenha valor)
+    this.inserindo = false;
   }
 
+  excluir(id?: number) { //chama aqui e perguta se o usuário confirma a escolha (passar parametro, id)
+    if (!id) return;
 
+    const RESPOSTA = confirm('Tem certeza que deseja remover o cliente selecionado ? Esta ação não pode ser desfeita.');
+    RESPOSTA ? this.clienteService.remover(id).subscribe(() => {
+      alert('Cliente excluido com sucesso!');
+      this.listar(); //atualiza lista
+    }) : null;
+  } //operação destrutiva (colocar mensagens) //caso não retorne nada () vazio (quando não possuir parametro)
 
+  //duas partes (clica no item e edita e salva) (UPDATE)
+  selecionar(cliente: Cliente) { //ao clicar no item (ao clicar aqui mudar a flag para distinguir se deve chamar inserir ou atualizar) (chama um ou outro e colocar if)
+    this.cliente = cliente;
+    this.inserindo = true;
+  }
 
   cancelar() { //joga undefined na variavel
-    this.inserirClientes = undefined;
+    this.cliente = undefined;
   }
 
   salvar() { //chamar o serviço e inserir
-    if (!this.inserirClientes) return; //cancela o script
-    this.clienteService.inserir(this.inserirClientes).subscribe(cliente => {
-      this.listar();
-      alert('Cliente adicionado com sucesso!');
-    }); //var
+    if (!this.cliente) return; //cancela o script
+
+    if (!this.inserindo) {
+      this.clienteService.inserir(this.cliente).subscribe(cliente => {
+        this.listar();
+        this.cancelar(); //para remover o form
+        alert('Cliente adicionado com sucesso!');
+      }); //var
+    } else {
+      this.clienteService.atualizar(this.cliente).subscribe(cliente => {
+        this.listar();
+        this.cancelar();
+        alert('Cliente atualizado com sucesso!');
+      })
+    }
+
   }
-
-
-
-
-
-
-
   //para serviço tambem faz injeção
 }

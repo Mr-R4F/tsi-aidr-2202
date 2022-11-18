@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,22 +16,23 @@
     <h2>Gerenciar Clientes</h2>
     <ul>
       <li *ngFor="let cliente of mostrarClientes">
-        {{cliente.nome}} - {{cliente.cpf}}
+        <span (click)="selecionar(cliente)">{{cliente.nome}} - {{cliente.cpf}}</span><!-- chama o selecionar passando o id e abre o form para editar as coisas -->
+        <span (click)="excluir(cliente.id)" style="margin-left: 3rem;">X</span><!-- passo o id, verifica se tem id e remove -->
       </li>
     </ul>
 
     <button type="button" (click)="criar()">NOVO</button>
 
-    <div id="fields" *ngIf="inserirClientes"><!-- só aparece se não for undefined -->
+    <div id="fields" *ngIf="cliente"><!-- só aparece se não for undefined -->
       <form action="#" method="#">
         <fieldset>
           <legend>ADD NOVO</legend>
 
           <label for="nome">Nome</label>
-          <input type="text" name="#" id="nome" placeholder="Nome" [(ngModel)]="inserirClientes.nome"><br>
+          <input type="text" name="#" id="nome" placeholder="Nome" [(ngModel)]="cliente.nome"><br>
 
           <label for="cpf">CPF</label>
-          <input type="text" name="#" id="cpf" placeholder="CPF" [(ngModel)]="inserirClientes.cpf"><br>
+          <input type="text" name="#" id="cpf" placeholder="CPF" [(ngModel)]="cliente.cpf"><br>
 
           <button type="button" (click)="cancelar()">CANCELAR</button>
           <button type="button" (click)="salvar()">SALVAR</button>
