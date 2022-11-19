@@ -8,9 +8,30 @@
 </head>
 <body>
   <div class="container">
-    <a routerLink="/cliente">Gestor de clientes</a><!-- router link -->
+    <mat-toolbar color="primary"><!-- possui coisas do material, importar toolbar -->
+      <mat-toolbar-row>
+        <button mat-icon-button><!-- importar botão -->
+          <mat-icon>menu</mat-icon>
+        </button>
+        <h1>Gestor de clientes</h1>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-sidenav-container><!-- fica o conteudo da página -->
+      <mat-sidenav mode="push" [opened]="true">
+        <mat-list>
+          <a routerLink="/cliente" mat-list-item><!-- router link -->
+            Gestor Clientes
+          </a>
+        </mat-list><!-- aceita listas -->
+      </mat-sidenav><!-- navbar lateral -->
+      <mat-sidenav-content style="min-height: calc(100vh - 64px);"><!-- tam min vai ser a tela menos o tam da barra -->
+        <router-outlet></router-outlet><!-- página toda aqui -->
+      </mat-sidenav-content><!-- conteúdo aqui -->
+    </mat-sidenav-container>
   </div>
-  <router-outlet></router-outlet>
+  <!-- criar a aplicação aqui -->
+<!-- possui padrões -->
 </body>
 </html>
 <!-- necessário jogar o componente e carregar os elemntos -->

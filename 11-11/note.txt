@@ -35,3 +35,8 @@ html, ts, css
 ng add @angular/material para instalar o material. (todas as dependencias)
 
 e depois escolher o tema de instalação
+necessário ativar o módulo para usar o material (cada item)]
+
+baixa todoas os auquivos uma vez ao carregar
+
+para ativar a metiral fonts
