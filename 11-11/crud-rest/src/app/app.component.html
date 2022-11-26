@@ -10,15 +10,15 @@
   <div class="container">
     <mat-toolbar color="primary"><!-- possui coisas do material, importar toolbar -->
       <mat-toolbar-row>
-        <button mat-icon-button><!-- importar botão -->
+        <button mat-icon-button (click)="sidenav.toggle()"><!-- importar botão --><!-- quando clicar 'toggle' nav bar -->
           <mat-icon>menu</mat-icon>
         </button>
-        <h1>Gestor de clientes</h1>
+        <h1 style="margin-left: 1rem;">Gestor de clientes</h1>
       </mat-toolbar-row>
     </mat-toolbar>
 
     <mat-sidenav-container><!-- fica o conteudo da página -->
-      <mat-sidenav mode="push" [opened]="true">
+      <mat-sidenav mode="side" #sidenav [opened]="true"><!-- para dar id #nome -->
         <mat-list>
           <a routerLink="/cliente" mat-list-item><!-- router link -->
             Gestor Clientes
@@ -26,7 +26,11 @@
         </mat-list><!-- aceita listas -->
       </mat-sidenav><!-- navbar lateral -->
       <mat-sidenav-content style="min-height: calc(100vh - 64px);"><!-- tam min vai ser a tela menos o tam da barra -->
-        <router-outlet></router-outlet><!-- página toda aqui -->
+        <mat-card class="mat-elevation-z2 cartao"><!-- para colocar itens -->
+          <mat-card-content>
+            <router-outlet></router-outlet><!-- página toda aqui -->
+          </mat-card-content><!-- Conteúdo do card -->
+        </mat-card>
       </mat-sidenav-content><!-- conteúdo aqui -->
     </mat-sidenav-container>
   </div>

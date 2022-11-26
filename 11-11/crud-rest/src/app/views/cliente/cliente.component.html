@@ -4,40 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    button {
-      cursor: pointer;
-    }
-  </style>
   <title>Document</title>
 </head>
 <body>
   <div class="container">
     <h2>Gerenciar Clientes</h2>
-    <ul>
-      <li *ngFor="let cliente of mostrarClientes">
-        <span (click)="selecionar(cliente)">{{cliente.nome}} - {{cliente.cpf}}</span><!-- chama o selecionar passando o id e abre o form para editar as coisas -->
-        <span (click)="excluir(cliente.id)" style="margin-left: 3rem;">X</span><!-- passo o id, verifica se tem id e remove -->
-      </li>
-    </ul>
+    <mat-selection-list [multiple]="false"><!-- lista -->
+      <mat-list-option *ngFor="let cliente of mostrarClientes" id="teste">
+        <div class="item-lista">
+            <span (click)="selecionar(cliente)">{{cliente.nome}} - {{cliente.cpf}}</span><!-- chama o selecionar passando o id e abre o form para editar as coisas -->
+            <button mat-icon-button color="accent" (click)="excluir(cliente.id)" style="margin-left: 3rem;">
+              <mat-icon>close</mat-icon>
+            </button><!-- passo o id, verifica se tem id e remove -->
+        </div>
+      </mat-list-option>
+    </mat-selection-list>
 
-    <button type="button" (click)="criar()">NOVO</button>
+    <button mat-mini-fab type="button" (click)="criar()" class="fab-add">
+      <mat-icon>add</mat-icon>
+    </button>
 
+    <br>
+    
     <div id="fields" *ngIf="cliente"><!-- só aparece se não for undefined -->
-      <form action="#" method="#">
-        <fieldset>
-          <legend>ADD NOVO</legend>
+        <mat-form-field appearance="fill" style="width: 100%">
+          <mat-label>Nome</mat-label>
+          <input type="text" name="#" id="nome" placeholder="Nome" [(ngModel)]="cliente.nome" matInput>
+        </mat-form-field><br>
 
-          <label for="nome">Nome</label>
-          <input type="text" name="#" id="nome" placeholder="Nome" [(ngModel)]="cliente.nome"><br>
+        <mat-form-field appearance="fill" style="width: 100%">
+          <mat-label>CPF</mat-label>
+          <input type="text" name="#" id="cpf" placeholder="CPF" [(ngModel)]="cliente.cpf" matInput>
+        </mat-form-field><br>
 
-          <label for="cpf">CPF</label>
-          <input type="text" name="#" id="cpf" placeholder="CPF" [(ngModel)]="cliente.cpf"><br>
+        <button type="button" (click)="cancelar()" mat-raised-button color="warn">Cancelar</button>
 
-          <button type="button" (click)="cancelar()">CANCELAR</button>
-          <button type="button" (click)="salvar()">SALVAR</button>
-        </fieldset>
-      </form>
+        <button type="button" (click)="salvar()" mat-raised-button color="accent" style="margin-left: 2rem;">Salvar</button>
     </div>
   </div>
 </body>

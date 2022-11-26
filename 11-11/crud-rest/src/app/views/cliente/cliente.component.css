@@ -1,0 +1,15 @@
+button {
+  cursor: pointer;
+}
+
+.item-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fab-add {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+}
