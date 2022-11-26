@@ -46,3 +46,53 @@ para ativar a metiral fonts
 
 cdk base de layout 
 package lugar onde fica o mate
+
+-- revisão
+
+Rotas -> páginação (serve para abrir diferentes componetes com base na url)
+endereço do componente (para configurar links para abrir componentes)
+url -> app routing module
+
+app router outlet -> onde são jogadas as coisas (da rota) (quando for acionada a url)
+assim é possível criar rotas par outras página com route link
+
+Local Storage 
+
+local trabalhar apenas com json
+
+rest -> chamadas https que chamam funções pela internet
+mandar e enviar dados em formato de JSON (geralmente)
+possui padrão para mapear funções do rest
+trabalha enviando e recebendo texto
+e possui métodos para associar com as funções do código -> POST (enviar /inserção dados), GET (pegar coisas, busca), DELETE (remove dados) , PUT (alterar dados)
+
+serviços
+
+-> componetes para interface gráfica
+-> serviços -> manipula informação (dados). ( e geralmente está ligado a algo REST)
+
+injeção como se fosse um new num serviço (possibilitando o uso em outros componentes)
+e criar serviço
+
+precisa colocar no componente
+ir no construtor do componente por o parametro do tipo do serviço e por o private
+
+observable -> serve para ao fazer as requisições não travar a aplicação enquando faz a chamada ( trabalha em threads, em paralelo)
+a req. exec numa thread e a pág na outras
+
+necessário subscribe (chamar) (para esperar o retorno e por na thread)
+para se inscrever deve voltar observable
+
+para chamar uma função subscriver (esperar o retorno e rodar um outra função (arrow function) para executar os dados (para esperar a resposta e executar))
+subscribe (é como se tivesse rodando em paralelo)
+executa em paralelo
+
+são usáveis para fazer chamadas para os métodos e dependendo muda o jeito que é chamado
+HttpClient -> endpoint (faz a req/ vai no serve e retorna dados)
+para fazer chamadas de métodos HTTP (volta observable)
+
+se volta definir o que volta(tipo)<DEFINIR-O-TIPO-AQUI> -> diamond
+e dps endereço para fzr a chamada e retornar os dados para quem chamou
+vai e volta JSON
+
+Material

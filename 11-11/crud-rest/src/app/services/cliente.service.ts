@@ -14,7 +14,7 @@ export class ClienteService {
   //OPERAÇÕES
   listar(): Observable<Cliente[]> { //converte em array js de cliente (o json que vem é convertido) (rodar em paralelo)
     return this.http.get<Cliente[]>("http://localhost:3000/cliente"); //chama e passa métodos (passar o endereço que vai bater, diamond <> -> para tipo generico)
-  } //retornar para quem chamou (volta o array)
+  } //retornar para quem chamou (volta o array) //retorna observable que volta de get
 
   inserir(cliente: Cliente): Observable<Cliente> { //receber os dados (vir por parametro) (por o tipo da model) (pq é via POST) (cliente volta cliente)
     return this.http.post<Cliente>("http://localhost:3000/cliente", cliente); //volta objeto (o item inserido)( passar url e corpo( o que vem de parametro (pega transforma e json e manda para o usuário)))
@@ -26,8 +26,8 @@ export class ClienteService {
   //necessário subtipo ( é o que volta)
 
   atualizar(cliente: Cliente): Observable<Cliente> { //receber os dados e id (vir por parametro) (pq é via PUT) (recebe o cliente modificado via ID)
-    if (!cliente.id) return EMPTY; //para cancelar dentro do observable (usar EMPTY (retona observable vazio)) retorno volta vazio
+    if (!cliente.id) return EMPTY; //para cancelar dentro do observable (usar EMPTY (retona observable vazio)) retorno volta vazio (pois passou um id que não existe) (EMPTY - observable que não faz nada)
     return this.http.put<Cliente>(`http://localhost:3000/cliente/${cliente.id}`, cliente); //recebe os argumentos do body (json) (passa o id do cliente e cliente atualizado) (id e corpo respectivamente)
   } //o retorno é o tipo observable (volta o id do cliente modificado) - passa o id que quer modificar
-  //necessário subtipo (é o que volta)
+  //necessário subtipo (é o que volta) (passar ID e dados)
 }
